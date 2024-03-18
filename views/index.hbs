@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+
+                html, body {
+                    margin: 0;
+                    padding: 0;
+                    font-family: Arial, sans-serif;
+                }
+
+                h1 {
+                    text-align: center;
+                    color: #333;
+                    font-size: 2.5rem;
+                    font-family: 'Young Serif', serif;
+                    font-weight: 600;
+                    margin-top: 2rem;
+                }
+
+                main {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-top: 2rem;
+                }
+
+                .email {
+                    margin-left: 25rem;
+                    margin-top: 8rem;
+                }
+
+                .mail {
+                    height: 2.5rem;
+                    width: 33rem;
+                    font-size: 1.5rem;
+                    padding: 0.5rem 1rem;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    outline: none;
+                }
+
+                .send {
+                    margin-left: 1rem;
+                    margin-top: 2rem;
+                    font-size: 1.22rem;
+                    border: 0;
+                    cursor: pointer;
+                    padding: 0.5rem 1.5rem;
+                    border-radius: 5px;
+                    background-color: #007bff;
+                    color: #fff;
+                    transition: background-color 0.5s, color 0.5s;
+                }
+
+                .send:hover {
+                    background-color: #0056b3;
+                }
+
+                .otp {
+                    margin-left: 25rem;
+                    margin-top: 5rem;
+
+                }
+
+                .otp input {
+                    height: 2.5rem;
+                    width: 33rem;
+                    font-size: 1.5rem;
+                    padding: 0.5rem 1rem;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    outline: none;
+                }
+
+                .verify {
+                    margin-left: 1rem;
+                    margin-top: 1.5rem;
+                    font-size: 1.22rem;
+                    border: 0;
+                    cursor: pointer;
+                    padding: 0.5rem 1.5rem;
+                    border-radius: 5px;
+                    background-color: #007bff;
+                    color: #fff;
+                    transition: background-color 0.5s, color 0.5s;
+                }
+
+                .verify:hover {
+                    background-color: #0056b3;
+                }
+
+    </style>
+</head>
+<body>
+    <h1>Email Verification</h1>
+    <main>
+        <form action="/verificationMail" class="email" id="email" method="post">
+            <input type="email" class="mail" name="email" placeholder="Enter your E-mail">
+            <button class="send" id="send" type="submit">Send OTP</button>
+        </form>
+        <form action="/mailVerified" class="otp" id="otp" method="post">
+            <input type="text" maxlength="4" name="otp" placeholder="OTP" id="otpno">
+            <button class="verify" id="verify" type="submit">Verify</button>
+        </form>
+    </main>
+</body>
+</html>
