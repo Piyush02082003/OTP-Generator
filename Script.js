@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -39,6 +40,6 @@ app.post('/mailVerified',async(req,res)=>{
 })
 
 app.listen(3000, () => {
-  console.log('server started on port 4000!');
+  console.log('server started on port 3000!');
 });
 

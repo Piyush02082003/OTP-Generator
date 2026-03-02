@@ -5,8 +5,8 @@ async function mailSender(email, title, body) {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "bansalpiyush833@gmail.com",
-        pass: "sfjb djdf tfpl xopw",
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
       },
     });
 
